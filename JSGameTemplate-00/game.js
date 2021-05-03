@@ -1,10 +1,10 @@
-let canvas=document.getElementById("canvas");
-let ctx=canvas.getContext("2d");
+var canvas=document.getElementById("canvas");
+var ctx=canvas.getContext("2d");
 
-let btnA=new Button("32px monospace","L",32,canvas.height-80,64,64);
-let btnB=new Button("32px monospace","R",canvas.width-96,canvas.height-80,64,64);
+var btnA;
+var btnB;
 
-let animation=null;
+var animation=null;
 
 
 
@@ -18,6 +18,10 @@ function resize() {
 	canvas.width=window.innerWidth;
 	canvas.height=window.innerHeight;
 
+  btnA = new Button("32px monospace", "L", 32, canvas.height - 80, 64, 64);
+
+  btnB = new Button("32px monospace", "R", canvas.width - 96, canvas.height - 80, 64, 64);
+ 	
 	draw();
 }
 
@@ -52,7 +56,7 @@ function draw() {
 
 */
 	
-	Graphics.drawText(ctx,"hi",0,0,4,font,['transparent','black']);
+	Graphics.drawText(ctx,"sa aking paglalakbay",0,0,4,font,['transparent','black']);
 
 	btnA.draw(ctx);	
 	btnB.draw(ctx);	
@@ -66,7 +70,9 @@ function draw() {
 
 function main() {
 	resize();
+
 	window.onresize=resize;
+ 
 	animation=setInterval(draw,1000/60);
 }
 

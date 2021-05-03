@@ -12,17 +12,21 @@ function Button(font,text,x,y,w,h) {
 		switch(this.state) {
 			case Button.UP:
 
+        ctx.beginPath();
 				ctx.fillStyle="#00000080";
 				ctx.strokeStyle="#FFFFFF80";
 				ctx.rect(this.x,this.y,this.w,this.h);
 				ctx.fill();
 				ctx.stroke();
+				ctx.closePath();
 
+        ctx.beginPath();
 				ctx.fillStyle="#FFFFFF80";
 				ctx.textAlign="center";
 				ctx.textBaseline="middle";
 				ctx.font=this.font;
 				ctx.fillText(this.text,this.x+this.w/2,this.y+this.h/2);
+        ctx.closePath();
 
 				break;
 
@@ -36,11 +40,13 @@ function Button(font,text,x,y,w,h) {
 				ctx.stroke();
         ctx.closePath();
 
+        ctx.beginPath();
 				ctx.fillStyle="#00000080";
 				ctx.textAlign="center";
 				ctx.textBaseline="middle";
 				ctx.font=this.font;
 				ctx.fillText(this.text,this.x+this.w/2,this.y+this.h/2);
+        ctx.closePath();
 
 				break;
 		}
