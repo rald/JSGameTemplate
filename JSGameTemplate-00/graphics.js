@@ -50,33 +50,4 @@ class Graphics {
 			this.drawBitmap(ctx,text.charCodeAt(i),x+i*bitmap.width*size,y,size,bitmap,palette);
 		}
 	}
-
-	static setFillStyle(style) {
-		ctx.fillStyle = style;
-	}
-
-	static setStrokeStyle(style) {
-		ctx.strokeStyle = style;
-	}
-
-	static setLineWidth(width) {
-		ctx.lineWidth = width;
-	}
-
-	static setFont(font) {
-		ctx.font=font;
-	}
-
-	static setTextAlign(alignment) {
-		ctx.textAlign=alignment;
-	}
-
-	static setTextBaseline(alignment) {
-		ctx.textBaseline=alignment;
-	}
-
-	static fillText(text, x, y) {
-		ctx.fillText(text, x, y);
-	}
-
 }

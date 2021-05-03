@@ -12,31 +12,35 @@ function Button(font,text,x,y,w,h) {
 		switch(this.state) {
 			case Button.UP:
 
-				Graphics.setFillStyle("#00000080");
-				Graphics.setStrokeStyle("#FFFFFF80");
-				Graphics.fillRect(this.x,this.y,this.w,this.h);
-				Graphics.drawRect(this.x,this.y,this.w,this.h);
+				ctx.fillStyle="#00000080";
+				ctx.strokeStyle="#FFFFFF80";
+				ctx.rect(this.x,this.y,this.w,this.h);
+				ctx.fill();
+				ctx.stroke();
 
-				Graphics.setFillStyle("#FFFFFF80");
-				Graphics.setTextAlign("center");
-				Graphics.setTextBaseline("middle");
-				Graphics.setFont(this.font);
-				Graphics.fillText(this.text,this.x+this.w/2,this.y+this.h/2);
+				ctx.fillStyle="#FFFFFF80";
+				ctx.textAlign="center";
+				ctx.textBaseline="middle";
+				ctx.font=this.font;
+				ctx.fillText(this.text,this.x+this.w/2,this.y+this.h/2);
 
 				break;
 
 			case Button.DOWN:
 
-				Graphics.setFillStyle("#FFFFFF80");
-				Graphics.setStrokeStyle("#00000080");
-				Graphics.fillRect(this.x,this.y,this.w,this.h);
-				Graphics.drawRect(this.x,this.y,this.w,this.h);
+        ctx.beginPath();
+				ctx.fillStyle="#FFFFFF80";
+				ctx.strokeStyle="#00000080";
+				ctx.rect(this.x,this.y,this.w,this.h);
+				ctx.fill();
+				ctx.stroke();
+        ctx.closePath();
 
-				Graphics.setFillStyle("#00000080");
-				Graphics.setTextAlign("center");
-				Graphics.setTextBaseline("middle");
-				Graphics.setFont(this.font);
-				Graphics.fillText(this.text,this.x+this.w/2,this.y+this.h/2);
+				ctx.fillStyle="#00000080";
+				ctx.textAlign="center";
+				ctx.textBaseline="middle";
+				ctx.font=this.font;
+				ctx.fillText(this.text,this.x+this.w/2,this.y+this.h/2);
 
 				break;
 		}
