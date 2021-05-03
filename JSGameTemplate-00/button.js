@@ -13,8 +13,8 @@ function Button(font,text,x,y,w,h) {
 			case Button.UP:
 
         ctx.beginPath();
-				ctx.fillStyle="#00000080";
-				ctx.strokeStyle="#FFFFFF80";
+				ctx.fillStyle="#C0C0C020";
+				ctx.strokeStyle="#FFFFFF20";
 				ctx.rect(this.x,this.y,this.w,this.h);
 				ctx.fill();
 				ctx.stroke();
