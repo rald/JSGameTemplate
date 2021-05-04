@@ -1,4 +1,4 @@
-var font={
+var fontBitmap={
 	"width":    8,
 	"height":   8,
 	"frames": 256,
