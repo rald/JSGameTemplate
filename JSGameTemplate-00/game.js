@@ -108,8 +108,8 @@ function draw() {
   if(btnL.state==Button.UP) leftButtonPressed=false;
   if(btnR.state==Button.UP) rightButtonPressed=false;
 
-// if(btnA.state==Button.DOWN) bounceSound.play();
-// if(btnB.state==Button.DOWN) selectSound.play();
+	if(btnA.state==Button.DOWN) bounceSound.play();
+	if(btnB.state==Button.DOWN) selectSound.play();
 
     if(upButtonPressed)    y-=speedY;
     if(downButtonPressed)  y+=speedY;
